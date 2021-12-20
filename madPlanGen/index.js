@@ -5,12 +5,10 @@ function removeDup(Arr) {
 }
 
 function generatePlan() {
-    // const foods = ["mad1", "mad2", "mad3", "mad4", "mad5", "mad6"]
     const foods = ["oksekød med ris", "pizza med stuff", "speghetti kødsovs", "hestemad", "rundstykker", "kødsovs med ris"]
     const days  = ["Mandag: ", "Tirsdag:", "Onsdag: ", "Torsdag:", "Fredag: ", "Lørdag: "]
 
     let foodTable = "<tr>";
-    let dayText = "dag";
     var foodArray = []
     
     
@@ -32,11 +30,9 @@ function generatePlan() {
         
     }
     
-    // console.log(foodArray.length);
     let uniqFoods = removeDup(foodArray);
-    // console.log(uniqFoods);
     if (foodArray.length != uniqFoods.length) {
-        // console.error("FUCK");
+        console.error("DEBUG MESSAGE!");
         generatePlan();
     }
     foodTable += "</tr></table>";
